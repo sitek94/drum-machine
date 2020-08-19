@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DrumMachine {
+  width: 75vw;
+  max-width: 768px;
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.PadBank {
+  padding: 1rem;
+  flex: 3;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, minmax(80px, 1fr));
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+}
+
+.DrumPad {
+  font-size: 1.5rem;
+}
+
+.Controls {
+  padding: 1rem;
+  flex: 2;
+
+  display: grid;
+  row-gap: 1rem;
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "title title"
+    "display display"
+    "volume volume"
+    "bank power";
+
+  text-align: center;
+
+  // Testing
+  & > div {
+    
+  }
+}
+
+.Title {
+  grid-area: title;
+}
+
+.Display {
+  grid-area: display;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VolumeSlider {
+  margin-bottom: -1rem;
+  grid-area: volume;
+
+
+}
+
+.BankSwitch {
+  grid-area: bank;
+}
+
+.PowerSwitch {
+  grid-area: power;
+}
