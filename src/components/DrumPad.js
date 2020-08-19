@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@material-ui/core';
 
-export default function DrumPad({ keyValue, label, src, disabled }) {
+export default function DrumPad({ keyValue, label, src, disabled, onClick }) {
   const audioEl = useRef();
 
   const playSound = () => {
@@ -14,9 +14,13 @@ export default function DrumPad({ keyValue, label, src, disabled }) {
   // Event handlers
   const handleClick = () => {
     playSound();
+    onClick(label);
   }
   const handleKeyDown = (e) => {
-    if (e.key === keyValue) playSound();
+    if (e.key === keyValue) {
+      playSound();
+      onClick(label);
+    }
   }
 
   // Add/remove event listeners

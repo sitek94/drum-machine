@@ -8,8 +8,8 @@ import PowerSwitch from '../components/PowerSwitch';
 import SoundsSwitch from '../components/SoundsSwitch';
 import PadBank from '../components/PadBank';
 
-import { drumKitSounds, oldschoolSounds } from '../sounds';
-import { epicSounds } from '../sounds/rick-and-morty/index';
+import epic from '../sounds/epic';
+import rickAndMorty from '../sounds/rick-and-morty';
 
 export default function DrumMachine() {
   // If hasPower is true then app is active
@@ -23,25 +23,51 @@ export default function DrumMachine() {
   const [displayText, setDisplayText] = useState('');
 
   // Loaded sounds
-  const [loadedSounds, setLoadedSounds] = useState(epicSounds);
+  const [loadedSounds, setLoadedSounds] = useState(epic);
   const toggleSounds = () => {
-    if (loadedSounds.id === epicSounds.id) {
-      setLoadedSounds(oldschoolSounds);
-      setDisplayText(oldschoolSounds.label);
+    // Display either epic or rick-and-morty sounds
+    if (loadedSounds.id === epic.id) {
+      setLoadedSounds(rickAndMorty);
+      setDisplayText(rickAndMorty.label);
     } else {
-      setLoadedSounds(epicSounds);
-      setDisplayText(epicSounds.label);
+      setLoadedSounds(epic);
+      setDisplayText(epic.label);
     }
   };
 
+  // Volume
+  const [volume, setVolume] = useState(.3);
+  const handleVolumeChange = (e, newValue) => {
+    setVolume(newValue);
+  }
+
+
   return (
     <Paper className="DrumMachine" elevation={5} id="drum-machine">
-      <PadBank sounds={loadedSounds.sounds} disabled={!hasPower} />
       <Title>Drum Machine</Title>
-      <Display disabled={!hasPower} text={displayText} />
-      <VolumeSlider value={50} onChange={() => 'TODO'} disabled={!hasPower} />
-      <PowerSwitch checked={hasPower} onChange={togglePower} />
-      <SoundsSwitch disabled={!hasPower} onChange={toggleSounds} />
+      <PadBank 
+        sounds={loadedSounds.sounds} 
+        volume={volume}
+        disabled={!hasPower}
+        onClick={setDisplayText}
+      />
+      <Display 
+        disabled={!hasPower} 
+        text={displayText} 
+      />
+      <VolumeSlider 
+        value={volume} 
+        onChange={handleVolumeChange} 
+        disabled={!hasPower} 
+      />
+      <PowerSwitch 
+        checked={hasPower} 
+        onChange={togglePower}
+      />
+      <SoundsSwitch 
+        disabled={!hasPower} 
+        onChange={toggleSounds}
+      />
     </Paper>
   );
 }
