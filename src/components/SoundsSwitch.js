@@ -7,7 +7,7 @@ export default function SoundsSwitch({ power, onChange }) {
   return (
     <FormControlLabel
       className="sounds-switch"
-      control={<Switch disabled={!power} onChange={onChange} />}
+      control={<Switch disabled={!power} onChange={onChange} color="primary" />}
       label="Sounds"
       labelPlacement="top"
     />

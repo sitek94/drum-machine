@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Paper } from '@material-ui/core';
 
 import Title from '../components/Title';
@@ -8,23 +8,20 @@ import PowerSwitch from '../components/PowerSwitch';
 import SoundsSwitch from '../components/SoundsSwitch';
 import PadBank from '../components/PadBank';
 
-function Container({ children }) {
+export default function DrumMachine() {
+  const [hasPower, setHasPower] = useState(true);
+  const togglePower = () => {
+    setHasPower(!hasPower);
+  }
+
   return (
     <Paper className="DrumMachine" elevation={5} id="drum-machine">
-      {children}
-    </Paper>
-  )
-}
-
-export default function DrumMachine() {
-  return (
-    <Container>
       <PadBank />
       <Title>Drum Machine</Title>
       <Display power text="Hip Hop" />
-      <VolumeSlider value={50} onChange={() => "TODO"} disabled={false} />
-      <PowerSwitch />
+      <VolumeSlider value={50} onChange={() => 'TODO'} disabled={false} />
+      <PowerSwitch hasPower={hasPower} onChange={togglePower} />
       <SoundsSwitch />
-    </Container>
+    </Paper>
   );
 }
