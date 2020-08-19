@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 import { FormControlLabel, Switch } from '@material-ui/core';
 
-export default function SoundsSwitch({ power, onChange }) {
+export default function SoundsSwitch({ disabled, onChange }) {
   return (
     <FormControlLabel
       className="sounds-switch"
-      control={<Switch disabled={!power} onChange={onChange} color="primary" />}
+      control={<Switch disabled={disabled} onChange={onChange} color="primary" />}
       label="Sounds"
       labelPlacement="top"
     />
   );
 }
 SoundsSwitch.propTypes = {
-  power: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
 };

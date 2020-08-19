@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Typography, Paper } from '@material-ui/core';
 
-export default function Display({ power, text }) {
+export default function Display({ disabled, text }) {
   return (
     <Paper
       className="display"
-      variant={power ? 'elevation' : 'outlined'}
-      elevation={power ? 9 : 3}
+      variant={disabled ? 'outlined' : 'elevation'}
+      elevation={disabled ? 3 : 10}
     >
       <Typography
-        color={power ? 'initial' : 'textSecondary'}
+        color={disabled ? 'textSecondary' : 'initial'}
         id="display"
         variant="h6"
       >
