@@ -41,7 +41,6 @@ export default function DrumMachine() {
     setVolume(newValue);
   }
 
-
   return (
     <Paper className="DrumMachine" elevation={5} id="drum-machine">
       <Title>Drum Machine</Title>
