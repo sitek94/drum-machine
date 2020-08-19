@@ -8,7 +8,7 @@ export default function SoundsSwitch({ disabled, onChange }) {
     <FormControlLabel
       className="sounds-switch"
       control={<Switch disabled={disabled} onChange={onChange} color="primary" />}
-      label="Sounds"
+      label="Old School?"
       labelPlacement="top"
     />
   );

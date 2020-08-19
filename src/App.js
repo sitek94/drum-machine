@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createMuiTheme, CssBaseline } from '@material-ui/core';
 
-import DrumMachine from './Containers/DrumMachine';
+import DrumMachine from './containers/DrumMachine';
 
 const theme = createMuiTheme({
   palette: {
