@@ -10,7 +10,7 @@ import butterBot from './butter-bot.mp3';
 
 export default {
   id: 2,
-  label: 'Rick&Morty Fever',
+  label: 'Rick and Morty Fever',
   sounds: [
     {
       label: 'Wubba Lubba Dub Dub',

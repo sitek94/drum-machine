@@ -11,7 +11,7 @@ import PadBank from '../components/PadBank';
 import epic from '../sounds/epic';
 import rickAndMorty from '../sounds/rick-and-morty';
 
-export default function DrumMachine() {
+export default function DrumMachine({ onSoundsSwitch }) {
   // If hasPower is true then app is active
   const [hasPower, setHasPower] = useState(false);
   const togglePower = () => {
@@ -33,6 +33,7 @@ export default function DrumMachine() {
       setLoadedSounds(epic);
       setDisplayText(epic.label);
     }
+    onSoundsSwitch();
   };
 
   // Volume
