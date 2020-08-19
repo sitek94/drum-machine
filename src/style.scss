@@ -17,22 +17,44 @@ html {
 }
 
 .DrumMachine {
-  width: 75vw;
-  max-width: 768px;
-  display: flex;
+  width: 700px;
 
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-template-areas: 
+    "pad-bank title title"
+    "pad-bank display display"
+    "pad-bank volume volume"
+    "pad-bank sounds power";
+  justify-content: center;
+
+  // Change app layout to vertical
   @media (max-width: 768px) {
-    flex-direction: column;
+    width: 400px;
+    column-gap: 0;
+    row-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+      "title title"
+      "pad-bank pad-bank"
+      "display display"
+      "volume volume"
+      "sounds power";
   }
+
   @media (max-width: 500px) {
+    padding: 1.5rem;
     width: 100%;
     height: 100%;
   }
 }
 
-.PadBank {
-  padding: 1rem;
-  flex: 3;
+.pad-bank {
+  grid-area: pad-bank;
 
   display: grid;
   gap: 1rem;
@@ -40,37 +62,15 @@ html {
   grid-template-columns: repeat(3, minmax(80px, 1fr));
 }
 
-.DrumPad {
+.drum-pad {
   font-size: 1.5rem;
 }
 
-.Controls {
-  padding: 1rem;
-  flex: 2;
-
-  display: grid;
-  row-gap: 1rem;
-  grid-template-rows: auto repeat(3, 1fr);
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-    "title title"
-    "display display"
-    "volume volume"
-    "bank power";
-
-  text-align: center;
-
-  // Testing
-  & > div {
-    
-  }
-}
-
-.Title {
+.title {
   grid-area: title;
 }
 
-.Display {
+.display {
   grid-area: display;
 
   display: flex;
@@ -78,17 +78,17 @@ html {
   align-items: center;
 }
 
-.VolumeSlider {
+.volume-slider {
   margin-bottom: -1rem;
   grid-area: volume;
 
 
 }
 
-.BankSwitch {
-  grid-area: bank;
+.sounds-switch {
+  grid-area: sounds;
 }
 
-.PowerSwitch {
+.power-switch {
   grid-area: power;
 }
