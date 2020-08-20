@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import DrumPad from './DrumPad';
 
 // PadBank renders a DrumPad for each of the sounds
-// In addition it pass down keyValue to trigger keyboard event
+// Rest of the props are volume, disabled and onClick
+// PadBank doesn't care about them so it spreads them over each drum pad
 export default function PadBank({ sounds, ...props }) {
+  // For each of the drum pads pass down a key that triggers keyboard event
   const keys = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 
   return (

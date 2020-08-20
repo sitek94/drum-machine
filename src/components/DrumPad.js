@@ -30,6 +30,7 @@ export default function DrumPad({
     onClick(label);
   };
   const handleKeyDown = (e) => {
+    console.log(e);
     if (e.key === keyValue) {
       playSound();
       onClick(label);
