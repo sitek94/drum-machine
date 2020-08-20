@@ -14,7 +14,7 @@ export default {
   sounds: [
     {
       label: 'Trolololo',
-      src: wololo,
+      src: trololo,
     },
     {
       label: 'AoE: Wololo',

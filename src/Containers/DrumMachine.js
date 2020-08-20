@@ -44,7 +44,7 @@ export default function DrumMachine({ onSoundsSwitch }) {
     setVolume(newValue);
   };
 
-  
+  // Should Rick Sanchez be displayed?
   const isRickActive = loadedSounds === rickAndMorty;
 
   return (
@@ -52,7 +52,7 @@ export default function DrumMachine({ onSoundsSwitch }) {
       <img
         src={rick}
         alt="rick sanchez"
-        className={`img-rick ${isRickActive ? 'show-rick' : 'hide-rick'}`}
+        className={`img-rick ${isRickActive ? 'show-rick' : ''}`}
       />
       <Title>Drum Machine</Title>
       <PadBank
