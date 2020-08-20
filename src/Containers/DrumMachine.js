@@ -30,7 +30,6 @@ export default function DrumMachine({ onSoundsSwitch }) {
     if (loadedSounds.id === epic.id) {
       setLoadedSounds(rickAndMorty);
       setDisplayText(rickAndMorty.label);
-      console.log("hello");
     } else {
       setLoadedSounds(epic);
       setDisplayText(epic.label);

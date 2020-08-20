@@ -10,7 +10,7 @@ export default function DrumPad({
   onClick,
 }) {
   // Audio ref
-  let audioEl = useRef('audio_tag');
+  let audioEl = useRef(null);
 
   // Update volume when it changes
   useEffect(() => {
@@ -23,9 +23,9 @@ export default function DrumPad({
     onClick(label);
   };
   const handleKeyDown = (e) => {
-   
     if (e.key === keyValue || e.key === keyValue.toUpperCase()) {
       playSound();
+      onClick(label);
     }
   };
 
