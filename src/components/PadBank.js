@@ -8,7 +8,7 @@ import DrumPad from './DrumPad';
 // PadBank doesn't care about them so it spreads them over each drum pad
 export default function PadBank({ sounds, ...props }) {
   // For each of the drum pads pass down a key that triggers keyboard event
-  const keys = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
+  const keys = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c'];
 
   return (
     <div className="pad-bank">

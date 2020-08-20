@@ -14,7 +14,7 @@ import rickAndMorty from '../sounds/rick-and-morty';
 
 export default function DrumMachine({ onSoundsSwitch }) {
   // If hasPower is true then app is active
-  const [hasPower, setHasPower] = useState(false);
+  const [hasPower, setHasPower] = useState(true);
   const togglePower = () => {
     setHasPower(!hasPower);
     setDisplayText(hasPower ? 'Power OFF' : 'Power ON');
