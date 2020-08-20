@@ -1,5 +1,5 @@
 export default {
-  id: 0,
+  id: 'power-drum-kit-123',
   label: 'Power Drum Kit',
   sounds: [
     {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Paper } from '@material-ui/core';
+import rick from '../rick.png';
 
 import Title from '../components/Title';
 import Display from '../components/Display';
@@ -29,6 +30,7 @@ export default function DrumMachine({ onSoundsSwitch }) {
     if (loadedSounds.id === epic.id) {
       setLoadedSounds(rickAndMorty);
       setDisplayText(rickAndMorty.label);
+      console.log("hello");
     } else {
       setLoadedSounds(epic);
       setDisplayText(epic.label);
@@ -37,37 +39,36 @@ export default function DrumMachine({ onSoundsSwitch }) {
   };
 
   // Volume
-  const [volume, setVolume] = useState(.3);
+  const [volume, setVolume] = useState(0.3);
   const handleVolumeChange = (e, newValue) => {
     setVolume(newValue);
-  }
+  };
+
+  
+  const isRickActive = loadedSounds === rickAndMorty;
 
   return (
     <Paper className="DrumMachine" elevation={5} id="drum-machine">
+      <img
+        src={rick}
+        alt="rick sanchez"
+        className={`img-rick ${isRickActive ? 'show-rick' : 'hide-rick'}`}
+      />
       <Title>Drum Machine</Title>
-      <PadBank 
-        sounds={loadedSounds.sounds} 
+      <PadBank
+        sounds={loadedSounds.sounds}
         volume={volume}
         disabled={!hasPower}
         onClick={setDisplayText}
       />
-      <Display 
-        disabled={!hasPower} 
-        text={displayText} 
+      <Display disabled={!hasPower} text={displayText} />
+      <VolumeSlider
+        value={volume}
+        onChange={handleVolumeChange}
+        disabled={!hasPower}
       />
-      <VolumeSlider 
-        value={volume} 
-        onChange={handleVolumeChange} 
-        disabled={!hasPower} 
-      />
-      <PowerSwitch 
-        checked={hasPower} 
-        onChange={togglePower}
-      />
-      <SoundsSwitch 
-        disabled={!hasPower} 
-        onChange={toggleSounds}
-      />
+      <PowerSwitch checked={hasPower} onChange={togglePower} />
+      <SoundsSwitch disabled={!hasPower} onChange={toggleSounds} />
     </Paper>
   );
 }

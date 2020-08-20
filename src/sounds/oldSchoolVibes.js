@@ -1,5 +1,5 @@
 export default {
-  id: 1,
+  id: 'old-school-2144',
   label: 'Old School Vibes',
   sounds: [
     {

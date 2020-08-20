@@ -9,7 +9,7 @@ import batman from './im-batman.mp3';
 import cartman from './goddamnit-cartman.mp3';
 
 export default {
-  id: 2,
+  id: 'epic-sounds-123',
   label: 'Epic Sounds',
   sounds: [
     {

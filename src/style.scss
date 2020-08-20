@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .DrumMachine {
@@ -42,6 +43,27 @@
     align-content: center;
   }
 }
+
+// Animated Rick Sanchez
+.img-rick {
+  position: absolute;
+  width: 200px;
+  left: -200px;
+  top: 5%;
+  transition: transform 1s;
+  z-index: 10;
+
+  // Move higher up and decrease the size so it's not 
+  // everlapping the ui
+  @media (max-width: 700px) {
+    top: -10px;
+    width: 150px;
+  }
+}
+.show-rick {
+  transform: translateX(200px);
+}
+
 
 .pad-bank {
   grid-area: pad-bank;
@@ -88,3 +110,4 @@
 .power-switch {
   grid-area: power;
 }
+

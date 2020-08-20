@@ -9,7 +9,7 @@ import showMe from './show-me-what-you-got.mp3';
 import butterBot from './butter-bot.mp3';
 
 export default {
-  id: 2,
+  id: 'rick-morty-213',
   label: 'Rick and Morty Fever',
   sounds: [
     {
