@@ -33,18 +33,20 @@ export default function DrumPad({
     if (disabled) return;
 
     const audio = audioEl.current;
+    if (audio === null) return;
 
-    let isPlaying = audio.currentTime > 0 && !audio.paused && !audio.ended 
-    && audio.readyState > 2;
-    
-    if (!isPlaying) {
-      audio.currentTime = 0;
-      audio.play();
+    audio.currentTime = 0;
+    const playPromise = audio.play();
+
+    // Catch DOM Exception error when running tests in Chrome
+    if (playPromise !== undefined) {
+      playPromise
+      .then(_ => {})
+      .catch(error => {
+        console.log(error);
+      })
     }
-    
   };
-
-  
 
   // Add/remove event listeners
   useEffect(() => {
