@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/drum-machine/static/css/main.1ed89904.chunk.css",
+    "main.js": "/drum-machine/static/js/main.3b5a0e6b.chunk.js",
+    "main.js.map": "/drum-machine/static/js/main.3b5a0e6b.chunk.js.map",
+    "runtime-main.js": "/drum-machine/static/js/runtime-main.49a0ba3c.js",
+    "runtime-main.js.map": "/drum-machine/static/js/runtime-main.49a0ba3c.js.map",
+    "static/js/2.68dabc59.chunk.js": "/drum-machine/static/js/2.68dabc59.chunk.js",
+    "static/js/2.68dabc59.chunk.js.map": "/drum-machine/static/js/2.68dabc59.chunk.js.map",
+    "index.html": "/drum-machine/index.html",
+    "precache-manifest.9e238c08b271efc385683783b2d54f3f.js": "/drum-machine/precache-manifest.9e238c08b271efc385683783b2d54f3f.js",
+    "service-worker.js": "/drum-machine/service-worker.js",
+    "static/css/main.1ed89904.chunk.css.map": "/drum-machine/static/css/main.1ed89904.chunk.css.map",
+    "static/js/2.68dabc59.chunk.js.LICENSE.txt": "/drum-machine/static/js/2.68dabc59.chunk.js.LICENSE.txt",
+    "static/media/badum-tsss.mp3": "/drum-machine/static/media/badum-tsss.61915dbf.mp3",
+    "static/media/bomb-has-been-planted.mp3": "/drum-machine/static/media/bomb-has-been-planted.c2da8ca5.mp3",
+    "static/media/butter-bot.mp3": "/drum-machine/static/media/butter-bot.02d6a56d.mp3",
+    "static/media/evil-morty.mp3": "/drum-machine/static/media/evil-morty.a201f89b.mp3",
+    "static/media/fatality.mp3": "/drum-machine/static/media/fatality.a99aeee9.mp3",
+    "static/media/goddamnit-cartman.mp3": "/drum-machine/static/media/goddamnit-cartman.7ddbff7e.mp3",
+    "static/media/good-job.mp3": "/drum-machine/static/media/good-job.579cc30a.mp3",
+    "static/media/gta-mission-complete.mp3": "/drum-machine/static/media/gta-mission-complete.fcbb6edf.mp3",
+    "static/media/i-like-what-you-got.mp3": "/drum-machine/static/media/i-like-what-you-got.7171d458.mp3",
+    "static/media/im-batman.mp3": "/drum-machine/static/media/im-batman.a8c56219.mp3",
+    "static/media/join-us-in-the-poopin.mp3": "/drum-machine/static/media/join-us-in-the-poopin.c5c44193.mp3",
+    "static/media/my-man.mp3": "/drum-machine/static/media/my-man.6cdc222e.mp3",
+    "static/media/pickle-rick.mp3": "/drum-machine/static/media/pickle-rick.05a4d882.mp3",
+    "static/media/rick-roll.mp3": "/drum-machine/static/media/rick-roll.b8f18cbc.mp3",
+    "static/media/rick.png": "/drum-machine/static/media/rick.f7b426eb.png",
+    "static/media/show-me-what-you-got.mp3": "/drum-machine/static/media/show-me-what-you-got.e076a637.mp3",
+    "static/media/trollolol.mp3": "/drum-machine/static/media/trollolol.229524ce.mp3",
+    "static/media/wolololo.mp3": "/drum-machine/static/media/wolololo.d4e94afc.mp3",
+    "static/media/wubalubadubdub.mp3": "/drum-machine/static/media/wubalubadubdub.ad4c7c2d.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49a0ba3c.js",
+    "static/js/2.68dabc59.chunk.js",
+    "static/css/main.1ed89904.chunk.css",
+    "static/js/main.3b5a0e6b.chunk.js"
+  ]
+}
